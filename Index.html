@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umraz S | Student Profile</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --bg: #e8edf5;
+      --surface: #e8edf5;
+      --text: #293449;
+      --muted: #758198;
+      --shadow-light: #ffffff;
+      --shadow-dark: #c6cedb;
+      --accent: #7c83fd;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .profile-card {
+      width: min(100%, 360px);
+      padding: 32px 26px 28px;
+      text-align: center;
+      border-radius: 30px;
+      background: var(--surface);
+      box-shadow: 12px 12px 28px var(--shadow-dark),
+                  -12px -12px 28px var(--shadow-light);
+    }
+
+    .avatar-wrap {
+      width: 126px;
+      height: 126px;
+      margin: 0 auto 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--surface);
+      box-shadow: inset 7px 7px 14px var(--shadow-dark),
+                  inset -7px -7px 14px var(--shadow-light);
+    }
+
+    .avatar {
+      width: 98px;
+      height: 98px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #9b9fff, #747cf4);
+      box-shadow: 5px 5px 12px #c6cedb, -5px -5px 12px #ffffff;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 29px;
+      letter-spacing: .3px;
+    }
+
+    .designation {
+      margin: 9px 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      height: 2px;
+      width: 64px;
+      margin: 0 auto 23px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+
+    .section-title {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .interests {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .interest {
+      padding: 13px 16px;
+      border-radius: 15px;
+      background: var(--surface);
+      box-shadow: 5px 5px 10px var(--shadow-dark),
+                  -5px -5px 10px var(--shadow-light);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .interest span {
+      margin-right: 6px;
+      font-size: 17px;
+    }
+
+    .footer {
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 380px) {
+      .profile-card { padding: 28px 18px 24px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile-card" aria-label="Student profile card">
+    <div class="avatar-wrap">
+      <div class="avatar" aria-label="Initials US">US</div>
+    </div>
+
+    <h1>Umraz S</h1>
+    <p class="designation">Student</p>
+
+    <div class="divider"></div>
+
+    <h2 class="section-title">My Interests</h2>
+    <div class="interests">
+      <div class="interest"><span aria-hidden="true">✏️</span>Drawing</div>
+      <div class="interest"><span aria-hidden="true">✂️</span>Craft Making</div>
+    </div>
+
+    <p class="footer">CREATIVE MIND · CURIOUS SOUL</p>
+  </main>
+</body>
+</html>
